@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Галерея изображений</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Галерея изображений</h1>
+  </header>
+
+  <section class="controls">
+    <input type="text" id="searchInput" placeholder="Поиск по названию..." />
+    <select id="categorySelect">
+      <option value="all">Все категории</option>
+      <option value="nature">Природа</option>
+      <option value="city">Город</option>
+      <option value="animals">Животные</option>
+    </select>
+    <select id="sortSelect">
+      <option value="date">Сортировать по дате</option>
+      <option value="name">Сортировать по названию</option>
+    </select>
+  </section>
+
+  <main>
+    <div id="gallery"></div>
+  </main>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button id="closeModal" aria-label="Закрыть">&times;</button>
+      <button id="prevBtn" class="modal-nav-button" aria-label="Предыдущее изображение">&#8249;</button>
+      <button id="nextBtn" class="modal-nav-button" aria-label="Следующее изображение">&#8250;</button>
+      <img id="modalImg" src="" alt="" />
+      <div id="modalTitle"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
